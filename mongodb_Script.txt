@@ -1,0 +1,14 @@
+use almufidbb
+db.createUser({  
+ user:"almufid",
+ pwd:"almufid",
+ roles:[  
+  {  
+     role:"readWrite",
+     db:"u8"
+  }
+ ],
+ mechanisms:[  
+  "SCRAM-SHA-1"
+ ]
+})
