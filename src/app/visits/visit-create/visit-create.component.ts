@@ -2,10 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
 import { VisitsService } from '../visits.service';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap  } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Visit } from '../visit.model';
 import { AuthService } from 'src/app/auth/auth.service';
+
 
 
 @Component ({
@@ -65,7 +66,6 @@ export class VisitCreateComponent implements OnInit, OnDestroy {
     } else {
       this.visitsService.updateVisit(this.visitId, form.value.title, form.value.content);
     }
-    form.resetForm();
   }
 
   ngOnDestroy ()  {

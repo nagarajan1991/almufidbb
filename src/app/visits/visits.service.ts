@@ -35,7 +35,7 @@ constructor(private http: HttpClient, private router: Router) {}
     };
     }))
     .subscribe((transformedVisitData) => {
-      console.log(transformedVisitData);
+      // console.log(transformedVisitData);
       this.visits = transformedVisitData.visits;
       this.visitsUpdated.next({
         visits: [...this.visits],
@@ -62,7 +62,7 @@ constructor(private http: HttpClient, private router: Router) {}
     this.http
     .post<{message: string, visitId: string}>(BACKEND_URL, visit)
     .subscribe((responseData) => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/viewvisit']);
     });
     }
 
@@ -70,7 +70,7 @@ constructor(private http: HttpClient, private router: Router) {}
       const visit: Visit = {id: id, title: title, content: content, creator: null};
       this.http.put(BACKEND_URL + id, visit)
       .subscribe(response => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/viewvisit']);
       });
     }
 

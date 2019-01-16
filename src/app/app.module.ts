@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routing.module';
 import { AuthInterceptor } from './auth/auth-interceptor';
@@ -14,13 +14,17 @@ import { ErrorInterceptor } from './error-interceptor';
 import { ErrorComponent } from './error/error.component';
 import { AngularMaterialModule } from './angular-material.module';
 import { VisitsModule } from './visits/visits.module';
+import { DashBoardComponent } from './dashboard/dashboard.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    ErrorComponent
+    MainNavComponent,
+    ErrorComponent,
+    DashBoardComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import { VisitsModule } from './visits/visits.module';
     BrowserAnimationsModule,
     HttpClientModule,
     AngularMaterialModule,
-    VisitsModule
+    VisitsModule,
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},

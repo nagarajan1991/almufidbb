@@ -3,7 +3,10 @@ import { MatInputModule,
   MatCardModule,
   MatButtonModule,
   MatToolbarModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSidenavModule,
+  MatListModule,
+  MatIconModule
 } from '@angular/material';
 import { MatExpansionModule,
   MatProgressSpinnerModule,
@@ -21,6 +24,9 @@ import { MatExpansionModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
   ],
   exports: [
     MatInputModule,
@@ -31,6 +37,9 @@ import { MatExpansionModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
   ]
 })
 export class AngularMaterialModule {
